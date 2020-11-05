@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'inicio/base.html' %} {% load static %} {% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="flexboxgrid.min.css">
+    <script src="https://kit.fontawesome.com/db35b9585f.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.slides.js"></script>
+    <script src="Principal.js"></script>
+    <title>Karate</title>
+</head>
+
+<body>
+
+    <header class="menu-fixed">
+        <div class="menu_bars">
+            <a href="#" class="btn_menu"><i class="fas fa-bars"></i>Menu</a>
+        </div>
+        <div>
+            <img class="Logo" src="Imagenes/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../Desarrollo web/Principal.html"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="Karate.html"><i class="fab fa-firefox"></i>Karate</a></li>
+                <li><a href="Entrenamiento.html"><i class="fas fa-dumbbell"></i>Entrenamiento</a></li>
+                <li><a href="Formulario.html"><i class="fas fa-file-invoice"></i>Formulario</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <section>
+            <p>
+                <!-- sub titulo -->
+                <h2>
+                    ¿Hay una edad ideal para practicar karate?
+
+                </h2>
+
+                <div>
+
+                    <img class="img0" src="imagenes/karateUno.png" alt="" width="960" height="640" />
+                    <img class="img0" src="imagenes/kobra2.jpg" alt="" width="960" height="640" />
+                    <img class="img0" src="imagenes/KarateDos1.jpg" alt="" width="960" height="640" />
+
+
+                </div>
+                <br>
+
+                <h3> ¿A qué altura se debería comenzar a aprender esta disciplina? ¿Existe alguna restricción para iniciarse en la vejez?
+                    <br /> Antes de responder estas interrogantes, deberías conocer primero cuáles son las ventajas de este deporte de los puños, patadas, katas y kumite.
+                    <br /> De esta forma puedes formarte un mejor juicio de si hay una edad ideal para que los chicos, sus padres o abuelos aprendan karate.</h3>
+            </p>
+
+            <div>
+                <img class="img1" src="Imagenes/karateimg.jpg " alt="" />
+            </div>
+
+            <!-- sub titulo -->
+            <h2>
+                Ventajas del Karate y cómo ayuda
+            </h2>
+
+
+
+            <div class="contenido">
+                <div class="parte1">
+
+                    <strong> <p>Por nombrar algunas ventajas</p></strong>
+                    <br />
+                    <p>
+                        1- Es una forma de disciplinar la mente y el cuerpo.
+                        <br></br>
+                        2- Favorece la concentración y equilibrio.
+                        <br></br>
+                        3- Ayuda a manejar la ansiedad y la hiperactividad.
+                        <br></br>
+                        4- Promueve el compañerismo y el respeto.
+                        <br></br>
+                        5- Mejora las habilidades sociales.
+                        <br></br>
+                        6- No requiere destrezas especiales, fuerza física, flexibilidad o estar en forma para comenzar.
+                        <br></br>
+                        7-Ayuda a la energuia y concentracion en niños con problemas de ira y atención.
+                        <br></br>
+                        8- El karate resulta beneficioso es muchos aspectos, incluyendo como tratamiento complementario para diveros trastornos.
+                    </p>
+                </div>
+                <div class="parte2">
+                    <strong> <p>¿En la infancia es mejor?</p></strong>
+                    <br />
+                    <p>
+                        ¿Te fijaste que en la lista anterior no hicimos referencia a alguna edad o limitación en especial? La mayoría de los instructores certificados considera que se trata de una disciplina que se puede aprender desde la infancia, juventud, adultez o estando
+                        ya muy mayor. Hoy incluso vemos personas que superan los 70 u 80 años que se animan a ver su primera clase y que rápidamente progresan porque es un deporte que les encanta. Es decir, las limitaciones se las pone uno mismo. Es ahí
+                        donde habría que preguntarse: ¿es entonces el karate un arte marcial para mí, sin importar mi edad o la de mi hijo? Sin duda alguna, hay beneficios del karate que generan más impacto de acuerdo con la edad. Por ejemplo, el karate
+                        para niños ayuda a los pequeños a desarrollar su sistema psicomotor, a tener más equilibrio, coordinación, comprensión espacial y a ser más veloces. Otras artes marciales como el taekwondo, el kung fu o el judo enseñan, al igual
+                        que el karate, muchos valores como respeto y disciplina, además de una filosofía propia y ética. Todas coinciden en que es importante ser ciudadanos responsables y rectos.
+                        <br> <br />
+                        <b><p>Edades recomendadas en niños y adultos</p></b>
+                        <br> En la mayoría de las artes marciales recomiendan que los pequeños empiecen a aprender las técnicas de defensa y ataque a partir de los 5 años. Sin embargo, en el caso del karate, se puede iniciar a partir de los 3 años, mientras
+                        que en el judo lo recomendable es a los 6 años, debido a que exige mayor concentración. Aunque hay que aclarar que esto no es una norma. Todo depende del entusiasmo, interés, sistema de estudio, filosofía o principios de la escuela,
+                        pedagogía del instructor y hasta el entorno social en el que funciona la academia.
+
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+</body>
+
+<footer>
+    {% include 'inicio/footer.html' %}
+</footer>
+
+</html>
+{% endblock %}
+
+</html>

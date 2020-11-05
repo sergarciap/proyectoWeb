@@ -1,0 +1,53 @@
+{% extends 'inicio/base.html' %} {% load static %} {% block content %} {% if request.user.is_authenticated %}
+<script>
+    window.location.href = '/accounts/profile/';
+</script>
+{% endif %}
+<style>
+    .errorlist {
+        color: red;
+    }
+</style>
+<main role="main">
+    <div>
+        <li><img class="image-login" src="{% static 'inicio/img/6.jpg' %}"></li>
+    </div>
+    <div class="login">
+        <div class="row mt-3">
+            <div>
+                <img class="logo-login" src="{% static 'inicio/img/icon 5.png' %}" alt="Logo" />
+            </div>
+            <div class="col-md-9 mx-auto mb-5">
+                {% if 'register' in request.GET %}
+                <p style="color:green;">Usuario registrado correctamente, ya puedes identificarte.</p>
+                {% endif %}
+                <form class="form-login" action="" method="post">{% csrf_token %}
+                    <h3 class="iniciar-sesion">Iniciar sesión</h3>
+                    {% if form.non_field_errors %}
+                    <p style="color:red">Usuario o contraseña incorrectos, prueba de nuevo.</p>
+                    {% endif %}
+                    <p>
+                        <p class="user-paswd"> Usuario </p><i class="fas fa-user-circle"></i>
+                        <input type="text" name="username" autofocus maxlength="254" required id="id_username" class="form-control" placeholder="Nombre de usuario" />
+                    </p>
+                    <p>
+                        <p class="user-paswd"> Contraseña </p><i class="fas fa-key"></i>
+                        <input type="password" name="password" required id="id_password" class="form-control" placeholder="Contraseña" />
+                    </p>
+                    <p><input type="submit" class="button-login" class="btn btn-primary btn-block" value="Acceder"></p>
+                    <p class="olvidar-clave">
+                        ¿Ha olvidado su clave? Puede restaurarla <a href="{% url 'password_reset' %}">aquí</a>.
+                    </p>
+                    {% if not request.user.is_authenticated %}
+                    <li class="registro-login"> ¿No tienes cuenta? <a href="{% url 'signup' %}">Registrate</a></li>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+        {% comment %} {% if not request.user.is_authenticated %}
+        <li><a href="{% url 'signup' %}">Registro</a></li>
+        <p><input type="submit" class="btn btn-primary btn-block" value="Acceder"></p>
+        {% endif %} {% endcomment %}
+    </div>
+</main>
+{% endblock %}

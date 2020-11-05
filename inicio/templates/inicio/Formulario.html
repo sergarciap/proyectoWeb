@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+{% extends 'inicio/base.html' %} {% load static %}{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    <div class="content">
+        <div>
+            <li><img class="image-form" src="{% static 'inicio/img/15.jpg' %}"></li>
+        </div>
+        <h1 class="logo">Queremos saber<span>de usted</span></h1>
+
+        <div class="contact-wrapper">
+            <div class="contact-form">
+                <h3 class="contacto">CONTACTANOS</h3>
+
+                <form name="formulario" id="formulario" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <p>
+                        <label>Rut</label>
+                        <input type="text" class="form-control" autocomplete="off" oninput="checkRut(this)" id="rut" name="rut" maxlength="10" maxlength="11" required placeholder="Rut" />
+                    </p>
+                    <p>
+                        <label>Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombre" autocomplete="off" name="nombre" required placeholder="nombre completo" />
+                    </p>
+                    <p>
+                        <label>Correo Electronico</label>
+                        <input type="email" class="form-control" id="email" autocomplete="off" name="email" required placeholder="correo" />
+                    </p>
+                    <p>
+                        <label>Celular</label>
+                        <input type="text" class="form-control" minlength="9" autocomplete="off" maxlength="9" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="telefono" name="telefono" required placeholder="celular" />
+                    </p>
+                    <p>
+                        <label>Edad</label>
+                        <input type="text" class="form-control" minlength="1" autocomplete="off" maxlength="2" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" id="edad" name="edad" required placeholder="edad" />
+                    </p>
+
+                    <div class="comuna-box">
+                        <p>Ciudad</p>
+                        <select id="comuna" name="comuna">
+                    <option value="viñadelmar">Viña del mar</option>
+                    <option value="valparaiso">Valparaiso</option>
+                    <option value="santiago">Santiago</option>
+                    <option value="temuco">Temuco</option>
+                    <option value="concepcion">Concepción</option>
+                    </select>
+                    </div>
+
+                    <div class="radio-button">
+                        <p>Genero</p>
+                        <input type="radio" name="sexo" id="hombre" value="hombre">
+                        <label for="hombre">Hombre</label>
+                        <input type="radio" name="sexo" id="mujer" value="mujer">
+                        <label for="mujer">Mujer</label>
+                    </div>
+                    <p class="block">
+                        <label>Mensaje</label>
+                        <textarea class="form-control" rows="3" rows="5" cols="5" maxlength="200" required name="mensaje" placeholder="Mensaje"></textarea>
+                    </p>
+                    <p class="block">
+                        <button class="btn btn-primary submit" id="validar" type="submit" value="POST">Enviar</button>
+                    </p>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h4>Mas Informacion</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i>Paradero de calle</li>
+                    <li><i class="fas fa-phone"></i>56 9 798 356 27</li>
+                    <li><i class="fas fa-envelope-open-text"></i>Contacto@onegym.com</li>
+                </ul>
+                <p>
+                    Consultas sobre planes de entrenamiento, asesorias privadas,control nutricional y mucho más. Preguntale a los profesionales del rubro, 20 años de experiencia. Al recibir su mensaje, nos pondremos en contacto con usted.
+                </p>
+                <p>
+                    www.onegym.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<footer>
+    {% include 'inicio/footer.html' %}
+</footer>
+
+</html>
+{% endblock %}

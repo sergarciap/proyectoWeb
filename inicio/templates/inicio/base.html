@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="{% static 'inicio/css/Style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" src="{% static 'vendor/font-awesone/css/flexboxgrid.min.css' %}">
+    <link rel="stylesheet" src="{% static 'inicio/css/jquery.dataTables.min.css' %}">
+    <script src="{% static 'inicio/vendor/jquery/db35b9585f.js' %}" crossorigin="anonymous"></script>
+    <title>Principal</title>
+    <script src="{% static 'inicio/vendor/jquery/jquery-latest.js' %}"></script>
+    <script src="{% static 'inicio/vendor/jquery/jquery-1.9.1.min.js' %}"></script>
+    <script src="{% static 'inicio/vendor/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'inicio/vendor/jquery/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'inicio/vendor/jquery/additional-methods.min.js' %}"></script>
+    <script src="{% static 'inicio/js/jquery.slides.js' %}"></script>
+    <script src="{% static 'inicio/vendor/jquery/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'inicio/bootstrap/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" src="{% static 'inicio/bootstrap/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" src="{% static 'inicio/bootstrap/bootstrap.min.css' %}">
+
+</head>
+
+<body>
+    {% if not request.user.is_authenticated %} {% else %}
+    <header class="menu-fixed">
+        <div class="menu_bars">
+            <a href="#" class="btn_menu"><i class="fas fa-bars"></i>Menu</a>
+        </div>
+        <div>
+            <img class="Logo" src="{% static 'inicio/img/logo.png' %}" alt="Logo" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio' %}"><i class="fas fa-home"></i>Inicio</a></li>
+
+                <li><a href="{% url 'Entrenamiento' %}"><i class="fas fa-dumbbell"></i>Entrenamiento</a></li>
+                <li><a href="{% url 'Karate' %}"><i class="fab fa-firefox"></i>Karate</a></li>
+                <li><a href="{% url 'Formulario' %}"><i class="fas fa-file-invoice"></i>Formulario</a></li>
+                <li><a href="{% url 'profile' %}"><i class="fas fa-home"></i>Perfil </a></li>
+                {% if request.user.is_staff and request.user.is_authenticated %}
+                <li><a href="{% url 'Formulario-Lista' %}"><i class="fas fa-file-invoice"></i> Mantenedor</a></li>
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logoutt' %}"><i class="fas fa-door-open" class="salir"></i></a>
+                </li>
+
+
+
+                {% endif %}
+            </ul>
+            </div>
+        </nav>
+    </header>
+    {% block content %}{% endblock %}
+
+</body>
+
+<script type="text/javascript" src="{% static 'inicio/js/Principal.js' %}"></script>
+
+</html>

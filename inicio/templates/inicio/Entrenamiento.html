@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+{% extends 'inicio/base.html' %} {% load static %} {% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    <div class="caja-madre">
+        <p class="titulo-central">
+            Los mejores entrenamientos
+        </p>
+        <div class="contenedor-caja">
+            <div class="caja-hijo">
+                <div class="icono-fitnes">
+                    <img src="{% static 'inicio/img/fitnes-1.jpg' %}" alt="">
+                </div>
+                <p>{{training.text}}
+
+                </p>
+                <div class="hijo">
+                    <img src="{% static 'inicio/img/galery5.jpg' %}" class="galeria__item">
+                </div>
+            </div>
+            <div class="caja-hija">
+                <div class="icono-fitnes-2">
+                    <img src="{% static 'inicio/img/fitnes-2.jpg' %}" alt="">
+                </div>
+                <p>
+                    {{training1.text}}
+                </p>
+                <div class="hija">
+                    <img src="{% static 'inicio/img/galery16.webp'  %}" class="galeria__item">
+                </div>
+            </div>
+        </div>
+
+        <div class="usuario">
+            <div class="imagen-3">
+                <img src="{% static 'inicio/img/fitnes-3.jpg' %}" alt="">
+            </div>
+            <div class="personal">
+                <p class="titulo-secundario">
+                    El Club Elite Fitness
+                </p>
+                <p class="parrafo">
+                    {{training2.text}}
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<footer>
+    {% include 'inicio/footer.html' %}
+</footer>
+
+</html>
+{% endblock %}

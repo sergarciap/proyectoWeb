@@ -1,0 +1,1364 @@
+/************************************ESTILOS GENERALES******************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    --border: 1px solid black;
+}
+
+header {
+    position: relative;
+    top: -20px;
+    width: 100%;
+}
+
+
+/***************************** colores del menu , diseño de los botones y Logo de la pagina **********************************/
+
+.Logo {
+    display: block;
+    float: left;
+    width: 135px;
+    height: 95px;
+    position: relative;
+}
+
+header nav {
+    width: 100%;
+    --max-width: 1000px;
+    margin: 15px auto;
+    background-color: rgb(172, 17, 43);
+}
+
+header div {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: rgb(94, 193, 250);
+}
+
+.menu_bars {
+    display: none;
+}
+
+header nav ul {
+    overflow: hidden;
+    list-style: none;
+}
+
+header nav ul li {
+    float: left;
+}
+
+header nav ul li a {
+    color: white;
+    padding: 15px;
+    width: 60%;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+}
+
+header nav ul li i {
+    margin-right: 10px;
+}
+
+header nav ul li a:hover {
+    background: rgb(17, 111, 165);
+}
+
+
+/************************************************* Logo de la página *********************************************************/
+
+.Logo {
+    display: block;
+    float: left;
+    width: 190px;
+    height: 90px;
+    position: relative;
+    top: 2px;
+}
+
+div section {
+    display: block;
+    float: left;
+    padding: 70px;
+    position: relative;
+    top: -40px;
+}
+
+.menu-fixed {
+    position: fixed;
+    z-index: 1000;
+    top: 10;
+}
+
+
+/******************************** sub menu responsive *************************************/
+
+@media screen and ( max-width:1000px) {
+    header nav {
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        left: -100%;
+        position: fixed;
+        top: 68px;
+        z-index: 100;
+    }
+    header div img {
+        left: -100%;
+    }
+    header nav ul li {
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgb(255, 255, 255, .3);
+    }
+    .menu_bars {
+        display: block;
+        width: 100%;
+        background: white;
+    }
+    .menu_bars .btn_menu {
+        display: block;
+        padding: 20px;
+        background-color: rgb(94, 193, 250);
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    header div i {
+        float: right;
+    }
+}
+
+
+/************************************** Estructura de la pagina Principal*************************************/
+
+
+/************************************* estructura del carrusel ***********************************************/
+
+.main {
+    width: 75%;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 4em;
+}
+
+.slides {
+    width: 100%;
+}
+
+.slides img {
+    width: 100%;
+}
+
+.slidesjs-pagination {
+    background-color: rgb(94, 193, 250);
+    list-style: none;
+    overflow: hidden;
+}
+
+.slidesjs-pagination li {
+    float: left;
+}
+
+.slidesjs-pagination li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    height: 16px;
+    width: 10px;
+}
+
+.slidesjs-pagination li a:hover {
+    background: rgb(6, 0, 88);
+}
+
+.slides .active {
+    background: rgb(6, 0, 88);
+}
+
+.slidesjs-navigation {
+    background: rgb(6, 0, 88);
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    float: right;
+}
+
+
+/************************************* informacion de la pagina ******************************************/
+
+.info-pagina {
+    position: relative;
+    left: 100px;
+    top: -100px;
+    margin: 0;
+    padding: 3em;
+    width: 80%;
+    float: left;
+}
+
+.info-pagina h3 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.nosotros {
+    color: rgb(6, 0, 88);
+}
+
+.info-pagina span {
+    color: rgb(6, 0, 88);
+}
+
+.info-central p,
+h3 {
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.logo-centrado {
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.logo-centrado img:hover {
+    transform: scale(1.2)
+}
+
+.cuerpo-galeria {
+    margin: 0;
+    padding: 1em;
+    width: 100%;
+    float: right;
+}
+
+.cuerpo-galeria p {
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+    color: rgb(6, 0, 88);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+}
+
+.imagenes-galeria img {
+    display: inline-block;
+    float: left;
+    width: 25%;
+}
+
+.galeria__item {
+    cursor: pointer;
+}
+
+div ul li {
+    list-style: none;
+}
+
+
+/***************************** informacion de la pagina responsive ***********************************/
+
+@media screen and ( max-width:1000px) {
+    .imagenes-galeria img {
+        display: block;
+        float: left;
+        width: 50%;
+    }
+    .info-central p,
+    .info-central h3 {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    .galeria_item {
+        cursor: pointer;
+    }
+    .contenedor {
+        position: relative;
+        right: 50px;
+    }
+    .info-pagina {
+        position: relative;
+        top: -120px;
+        left: 80px;
+        margin: 0;
+        padding: 20px;
+        width: 80%;
+        display: block;
+    }
+}
+
+@media screen and ( max-width:700px) {
+    .info-central p,
+    .info-central h3 {
+        position: relative;
+        top: -100px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        text-align: center;
+    }
+    .info-pagina {
+        position: relative;
+        top: 3em;
+        left: 40px;
+        margin: 0;
+        padding: 20px;
+        width: 80%;
+        display: block;
+    }
+    .cuerpo-galeria {
+        position: relative;
+        margin: 0;
+        padding: 1em;
+        width: 100%;
+        left: 50px;
+        top: -100px;
+    }
+    .imagenes-galeria img {
+        display: block;
+        width: 80%;
+        height: 65%;
+    }
+    .galeria_item {
+        cursor: pointer;
+    }
+    .contenedor p {
+        text-align: center;
+    }
+    .logo-centrado {
+        position: relative;
+        top: -120px;
+    }
+    .logo-centrado img:hover {
+        transform: scale(1.2)
+    }
+    .cuerpo-galeria p {
+        position: relative;
+        top: -25px;
+        right: 45px;
+        margin: 0;
+        padding: 30px;
+    }
+}
+
+
+/***************************** contenedores de la pagina *******************************/
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    padding: 2em;
+    width: 85%;
+}
+
+.contenedor .entrenamiento,
+.contenedor .funcional,
+.contenedor .grupal,
+.contenedor .personal-trainer {
+    position: relative;
+    top: -200px;
+    margin: 0;
+    padding: 2em;
+    width: 100%;
+    text-justify: auto;
+}
+
+.icono-entrenamiento,
+.icono-funcional,
+.icono-grupal,
+.icono-trainer {
+    position: relative;
+    margin: 0;
+    padding: 5px;
+    width: 70px;
+    left: 40%;
+}
+
+.icono-trainer img:hover {
+    transform: scale(2.0)
+}
+
+.icono-grupal img:hover {
+    transform: scale(2.0)
+}
+
+.icono-funcional img:hover {
+    transform: scale(2.0)
+}
+
+.icono-entrenamiento img:hover {
+    transform: scale(2.0)
+}
+
+.contenedor div p {
+    margin: 0;
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+section div h3 {
+    text-align: center;
+    font-size: 20px;
+    color: rgb(4, 15, 10);
+    top: 100;
+}
+
+
+/***************************************** contenedor responsive *****************************************/
+
+@media screen and ( max-width:800px) {
+    .contenedor {
+        position: relative;
+        top: -90px;
+        right: -10px;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        width: 90%;
+    }
+    .contenedor .karate,
+    .contenedor .entrenamiento,
+    .contenedor .personal-trainer {
+        position: relative;
+        top: 50px;
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+
+/**********************************estructura del footer pie de pagina ************************/
+
+footer {
+    background: gray;
+    width: 100%;
+}
+
+.pie {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0%;
+    width: 100%;
+    color: white;
+}
+
+.url {
+    position: relative;
+    left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    width: 100%;
+}
+
+.url p {
+    position: relative;
+    top: 50px;
+    margin: 0;
+    padding: 5px;
+}
+
+.redes-sociales {
+    position: relative;
+    right: 30px;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+}
+
+.redes-sociales p {
+    position: relative;
+    right: 20px;
+    text-align: center;
+    margin: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.telefono {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
+    width: 100%;
+}
+
+.telefono p {
+    text-align: center;
+    margin: 10px;
+}
+
+.telefono .direccion {
+    font-size: 25px;
+}
+
+.telefono p {
+    position: relative;
+    top: 10px;
+}
+
+div dd {
+    margin: 5px;
+    padding: 7px;
+    position: relative;
+    left: 10%;
+    font-size: 50px;
+    width: 10%;
+}
+
+@media screen and ( max-width:900px) {
+    div dd {
+        position: relative;
+        left: -1%;
+    }
+}
+
+@media screen and ( max-width:700px) {
+    .pie {
+        display: block;
+        margin: 0%;
+        width: 100%;
+    }
+    .url p {
+        position: relative;
+        right: 30px;
+        text-align: center;
+    }
+    .redes-sociales {
+        position: relative;
+        left: 10px;
+        top: -50px;
+        width: 90%;
+    }
+    .telefono p {
+        position: relative;
+        top: -35px;
+        text-align: center;
+        margin: 10px;
+    }
+    .url {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        text-align: center;
+        margin: 10px;
+    }
+    div dd {
+        position: relative;
+        left: 15%;
+        top: 35px;
+        font-size: 40px;
+    }
+}
+
+
+/********************************Estructura de la Pagina de karate***********************************/
+
+
+/******************************* titulo karate pagina ***********************************************/
+
+.container {
+    width: 75%;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding-top: 60px;
+}
+
+.container-beta {
+    margin: 0;
+    padding: 20px;
+}
+
+.container-beta p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo2 {
+    text-align: center;
+    color: rgba(6, 0, 88);
+    margin: 0;
+    padding: 25px;
+}
+
+.titulo3 {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    color: rgba(6, 0, 88);
+}
+
+.img0 {
+    width: 32%;
+    display: inline-block;
+    transform: scale(0.9)
+}
+
+.img0:hover {
+    transform: scale(1.1);
+}
+
+div.img1 {
+    width: 96%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+.contenido .parte1,
+.contenido .parte2 {
+    position: relative;
+    right: 30px;
+    margin: 0;
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: relative;
+    top: -20px;
+    width: 100%;
+}
+
+
+/************ karate responsive  ****************/
+
+@media screen and (max-width: 700px) {
+    .img0 {
+        width: 100%;
+        display: block;
+    }
+    .contenido {
+        width: 100%;
+        display: block;
+    }
+}
+
+.example1 td:nth-child(1) {
+    font-family: NotoSans !important;
+    font-size: 13px !important;
+    color: #333 !important;
+}
+
+.example1 td:nth-child(2) {
+    font-family: NotoSans !important;
+    font-size: 13px !important;
+    color: #333 !important;
+}
+
+.example1 td:nth-child(3) {
+    font-family: NotoSans !important;
+    font-size: 13px !important;
+    color: #333 !important;
+}
+
+.example1 td:nth-child(4) {
+    font-family: NotoSans !important;
+    font-size: 13px !important;
+    color: #333 !important;
+}
+
+
+/************************Estructura de la Pagina de entrenamiento************************************/
+
+.caja-madre {
+    position: relative;
+    left: -50px;
+    top: 50px;
+    width: 75%;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 4em;
+}
+
+.caja-madre .titulo-central {
+    position: relative;
+    left: 50px;
+    margin: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: rgb(6, 0, 88);
+}
+
+.contenedor-caja {
+    position: relative;
+    top: -50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 3em;
+    width: 100%;
+}
+
+.contenedor-caja p {
+    text-align: center;
+    padding: 3em;
+    width: 80%;
+}
+
+.caja-hijo,
+.caja-hija {
+    width: 85%;
+}
+
+.caja-hijo,
+.caja-hija p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.hijo,
+.hija {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+.usuario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 2em;
+    width: 100%;
+}
+
+.usuario .imagen-3,
+.usuario .personal {
+    margin: 0;
+    padding: 2em;
+    width: 90%;
+}
+
+.usuario .imagen-3 {
+    position: relative;
+    top: -50px;
+    width: 80%;
+}
+
+.personal .titulo-secundario {
+    position: relative;
+    top: -40px;
+    margin: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: rgb(6, 0, 88);
+}
+
+.parrafo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.icono-fitnes {
+    position: relative;
+    left: 26%;
+    top: 25px;
+    margin: 0;
+    padding: 1em;
+    width: 150px;
+}
+
+.icono-fitnes:hover {
+    transform: scale(1.2)
+}
+
+.icono-fitnes-2 {
+    position: relative;
+    left: 18%;
+    top: 25px;
+    margin: 0;
+    padding: 1em;
+    width: 225px;
+}
+
+.icono-fitnes-2:hover {
+    transform: scale(1.2)
+}
+
+
+/******************************Pagina responsive de entrenamiento*****************************/
+
+@media screen and (max-width: 1000px) {
+    .caja-madre {
+        position: relative;
+        left: -100px;
+    }
+    .titulo-central p {
+        position: relative;
+        left: 100px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .caja-madre {
+        position: relative;
+        left: -50px;
+    }
+    .caja-hijo,
+    .caja-hija {
+        display: block;
+        margin: 0;
+        padding: 20px;
+        width: 100%;
+    }
+    .contenedor-caja {
+        display: block;
+        margin: 0;
+        padding: 2em;
+        width: 100%;
+    }
+    .hijo,
+    .hija {
+        position: relative;
+        left: 20px;
+        margin: 0;
+        padding: 20px;
+        width: 80%;
+    }
+    .usuario {
+        display: block;
+        position: relative;
+        top: -50px;
+        margin: 0;
+        padding: 2em;
+        width: 100%;
+    }
+    .usuario .imagen-3 {
+        position: relative;
+        left: 50px;
+        width: 70%;
+    }
+    .parrafo {
+        text-align: center;
+    }
+}
+
+
+/********************************************Estructura del Formulario*************************************/
+
+
+/********************************************** Cuerpo del formulario *************************************/
+
+.content {
+    position: relative;
+    top: 60px;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+    height: 1400px;
+    color: rgb(6, 0, 88);
+}
+
+.logo {
+    text-align: center;
+    font-size: 3em;
+    padding: 20px;
+    color: black;
+}
+
+.logo span {
+    color: #0e5db7;
+}
+
+.contact-wrapper {
+    box-shadow: 0 0 30px 0 rgb(0, 0, 0);
+}
+
+
+/*************** Estructura del informcion del usuario ************************/
+
+.contact-wrapper>* {
+    padding: 1em;
+}
+
+.contact-form {
+    background-color: white;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 90%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    border-bottom: 2px solid black;
+    font-size: 23px;
+    color: rgb(6, 0, 88);
+    list-style: none;
+}
+
+.contact-form form button {
+    background: rgb(6, 0, 88);
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    color: white;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: rgb(15, 15, 17);
+    color: white;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+.contact-info {
+    background: rgb(15, 15, 17);
+    color: blanchedalmond;
+    text-align: center;
+}
+
+.contact-info h4,
+.contact-form ul,
+.contact-form p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+    font-size: 20px;
+}
+
+.contact-form p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    padding: .3em;
+}
+
+.contacto {
+    text-align: center;
+    padding: 20px;
+}
+
+div ul li i {
+    padding: 10px;
+}
+
+.radio-button {
+    margin: 10px;
+    padding: 10px;
+}
+
+form input[type="radio"] {
+    display: none;
+}
+
+form .classs input[type="radio"] {
+    display: block;
+}
+
+form .radio-button label {
+    color: rgb(6, 0, 88);
+    background: white;
+    padding: 5px 15px 5px 50px;
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form .radio-button label:hover {
+    background: rgba(4, 63, 255, 0.925);
+}
+
+form .radio-button label:before {
+    content: "";
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background: none;
+    border: 3px solid rgb(6, 0, 88);
+    border-radius: 50%;
+    position: absolute;
+    left: 17px;
+    top: 3px;
+}
+
+form input[type="radio"]:checked+label {
+    padding: 5px 15px;
+    background: rgb(6, 0, 88);
+    border-radius: 2px;
+    color: white;
+}
+
+form input[type="radio"]:checked+label:before {
+    display: none;
+}
+
+.comuna-box {
+    text-align: center;
+}
+
+.comuna-box select {
+    position: relative;
+    top: 20px;
+    margin: 10px;
+    padding: 10px;
+    width: 85%;
+    background: rgb(6, 0, 88);
+    color: white;
+    border: none;
+    box-shadow: 0 5px 5px rgba(0, 0, 0.5);
+}
+
+
+/******************* Responsive pantalla grande del Formulario***************/
+
+@media (min-width: 700px) {
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        padding: 1em;
+        text-align: left;
+    }
+    .contact-form p {
+        text-align: left;
+    }
+    .content {
+        height: 1150px;
+    }
+}
+
+
+/* Estilo lightbox entre modales*/
+
+.modal {
+    display: flex;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: -10%;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__img {
+    width: 60%;
+    border: rgba(6, 0, 88) 7px solid;
+}
+
+.modal__boton {
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: monospace;
+    line-height: 50px;
+    text-align: center;
+    background: rgb(6, 0, 88);
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 50px;
+    top: 100px;
+}
+
+.galeria__item {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.galeria__item:hover {
+    opacity: 0.7;
+    transform: scale(0.9);
+}
+
+
+/*******************************Mantenedor del formulario**********************************************/
+
+.Mantendor-principal {
+    position: relative;
+    top: 90px;
+    width: 80%;
+    left: 10%;
+}
+
+.titulo-mantenedor {
+    position: relative;
+    left: 50px;
+    margin: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: rgb(6, 0, 88);
+    padding: 20px;
+}
+
+.tabla {
+    margin: 0;
+    padding: 25px;
+    background-color: rgb(77, 75, 75);
+    color: rgb(252, 252, 252);
+    border: 2px solid rgb(6, 0, 88);
+}
+
+tbody {
+    margin: 0;
+    background: rgb(250, 250, 250);
+    color: black;
+}
+
+tr {
+    text-align: center;
+}
+
+tr th {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 10%;
+}
+
+tr td {
+    padding: 10px;
+    border: 1px solid rgb(6, 0, 88);
+}
+
+.mensaje {
+    width: 20%;
+}
+
+
+/*******************************modificar formulario**********************************************/
+
+.update-delet {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 25%;
+    top: 100px;
+    width: 50%;
+    text-align: center;
+    background-color: rgb(77, 75, 75);
+    color: white;
+    font-size: 25px;
+}
+
+.button-update,
+.button-delete {
+    background: rgb(77, 75, 75);
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    color: white;
+}
+
+.button-update:hover,
+.button-update:focus,
+.button-delete:hover,
+.button-delete:focus {
+    background: rgb(0, 0, 0);
+    color: white;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+.image-form {
+    position: absolute;
+    left: -70px;
+    top: -20px;
+    z-index: -1000;
+    opacity: 0.7;
+    width: 111.1%;
+    height: 100%;
+}
+
+.update-info {
+    background: rgb(45, 45, 46);
+    color: blanchedalmond;
+}
+
+.clas {
+    margin: 0;
+    padding: 10px;
+    width: 90%;
+    font-size: 20px;
+    background: rgb(99, 99, 99);
+    color: white;
+    border: none;
+    text-align: center;
+}
+
+.registro {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(73, 73, 73);
+    color: white;
+    font-size: 15px;
+}
+
+
+/*******************login***************/
+
+.login {
+    position: relative;
+    top: 70px;
+    width: 70%;
+    height: 370px;
+    max-width: 350px;
+    margin: 25px auto;
+    padding-top: 70px;
+    background: rgb(255, 255, 255);
+    color: rgb(26, 25, 25);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.logo-login {
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    top: -75px;
+    left: 20%;
+    width: 45%;
+}
+
+.form-login {
+    position: relative;
+    top: -150px;
+    width: 100%;
+    margin: 30px;
+    padding: 10px;
+}
+
+.form-control {
+    width: 60%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.olvidar-clave {
+    width: 80%;
+    max-width: 250px;
+    padding: 1px;
+    margin: 1px;
+    font-size: 13px;
+}
+
+.registro-login {
+    position: relative;
+    right: 5px;
+    width: 80%;
+    max-width: 250px;
+    padding: 4px;
+    margin: 4px;
+    font-size: 13px;
+    list-style: none;
+}
+
+.button-login {
+    background: rgb(6, 0, 88);
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    color: white;
+    width: 70%;
+    max-width: 250px;
+    margin: 15px;
+}
+
+.button-login:hover,
+.button-login:focus {
+    background: rgb(0, 0, 0);
+    color: white;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+.image-login {
+    position: absolute;
+    left: -70px;
+    z-index: -1000;
+    opacity: 0.7;
+    width: 120%;
+    height: 111%;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+/**************login responsive***************************/
+
+@media (max-width: 700px) {
+    .form-login {
+        position: relative;
+        width: 100%;
+        margin: 20px;
+        padding: 10px;
+    }
+}

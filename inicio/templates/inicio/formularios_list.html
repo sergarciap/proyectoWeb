@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+{% extends 'inicio/base.html' %} {% load static %} {% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="Mantendor-principal">
+        <p class="titulo-mantenedor">
+            Formularios Guardados
+        </p>
+        <table id="tablaFormulario" class="tabla" style="padding-left: 0px !important; padding-right: 0px !important;" cellspacing="0" cellpadding="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Rut</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Telefono</th>
+                    <th>Edad</th>
+                    <th>Comuna</th>
+                    <th>Genero</th>
+                    <th class="mensaje">Mensaje</th>
+                    <th>Modificar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for unit in list %}
+                <tr>
+                    <td>{{unit.rut}}</td>
+                    <td>{{unit.nombre}}</td>
+                    <td>{{unit.correo}}</td>
+                    <td>{{unit.telefono}}</td>
+                    <td>{{unit.edad}}</td>
+                    <td>{{unit.comuna}}</td>
+                    <td>{{unit.sexo}}</td>
+                    <td>{{unit.mensaje}}</td>
+                    <td><a href="{% url 'update' unit.id %}" id='{{unit.id}}'><i class="fas fa-edit"></i></a></td>
+                    <td><a href="{% url 'delete' unit.id %}" id='{{unit.id}}'><i class="fas fa-trash-alt"></i></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        $('#tablaFormulario').DataTable({
+            dom: 'lrftip',
+            autoWidth: true,
+            responsive: true,
+            deferRender: true,
+            scrollCollapse: true,
+            stateSave: true,
+            processing: true,
+            stateSave: true,
+            bDestroy: true,
+            language: {
+                emptyTable: "No hay datos disponibles",
+                info: "Mostrando _START_ al _END_ de _TOTAL_ filas",
+                infoEmpty: "Mostrando 0 al 0 de 0 filas",
+                infoFiltered: "(Filtradas desde _MAX_ filas totales)",
+                infoPostFix: "",
+                thousands: ",",
+                lengthMenu: "Mostrar _MENU_ registros",
+                loadingRecords: "cargando...",
+                processing: "Procesando...",
+                search: "Buscar:",
+                zeroRecords: "No se encontraron registros",
+
+                paginate: {
+                    first: "Primero",
+                    last: "último",
+                    next: "Siguiente",
+                    previous: "Anterior",
+                },
+
+                aria: {
+                    sortAscending: ": activar ordenamiento ascendente",
+                    sortDescending: ": activar ordenamiento descendente",
+                },
+                columnDefs: [
+
+                    {
+                        type: 'date-uk',
+                        targets: 10
+                    }
+                ],
+            }
+        });
+    });
+</script>
+
+</html>
+{% endblock %}

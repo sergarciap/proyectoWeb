@@ -1,0 +1,24 @@
+{% extends 'inicio/base.html' %} {% load static %} {% block title %}Actualizar página{% endblock %} {% block content %}
+<main role="main">
+    <div class="update-delet">
+        <div class="row mt-3 mb-5">
+            <div class="col-md-9 mx-auto">
+                <div>
+                    {% if 'ok' in request.GET %}
+                    <p>
+                        Página editada correctamente.
+                        <a href="{% url 'Formulario-List' %}">Haz clic aquí para ver el resultado</a>.
+                    </p>
+                    {% endif %}
+                    <form action="" class="update-info" method="post">{% csrf_token %} {{ form.as_p }}
+                        <div>
+                            <input type="submit" class="button-update" class="btn btn-primary btn-block" value="Actualizar página" />
+                            <a href="{% url 'Formulario-Lista' %}"><input type="button" class="button-delete" class="btn btn-primary btn-block" value="No, Volver a la tabla" /></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+{% extends 'inicio/base.html' %} {% load static %} {% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="slides">
+            <img src="{% static 'inicio/img/1.png' %}" />
+            <img src="{% static 'inicio/img/2.png' %}" />
+            <img src="{% static 'inicio/img/3.png' %}" />
+            <img src="{% static 'inicio/img/4.png' %}" />
+            <img src="{% static 'inicio/img/E1.jpg' %}" />
+        </div>
+    </div>
+
+
+    <div class="info-pagina">
+        <div class="info-central">
+            <div class="logo-centrado">
+                <img src="{% static 'inicio/img/logo.png' %}">
+            </div>
+            <h3 class="nosotros">Acerca de nosotros</h3>
+            <p>
+                <b>One-gym te ofrece alta calidad de equipos de “fitness” y un servicio profesional en un entorno agradable y moderno a un precio justo.</b> Si quieres bajar peso, aumentar músculo, entrenar resistencia, o simplemente mantenerte en forma,
+                te apoyaremos en el logro de tus objetivos con asesoramiento profesional. También incluimos una variedad de cursos que te ofrece la posibilidad de variar tu entrenamiento. Atendemos 7 días por la semana, para que puedas planificar tu entrenamiento
+                personal de manera flexible. ¡Esperamos tu visita! </p>
+            <P><b>Brevemente queremos compartir contigo cual es nuestra filosofía de trabajo, y que aspectos son los que considera más importantes en el proceso de entrenamiento.</b> Nos parece importante que sepas que si bien estamos continuamente estudiando
+                y procesando información de artículos científicos, libros, comunicación personal con entrenadores y deportistas, y por nuestra propia experiencia como atletas, a la hora de diseñar un programa de entrenamiento nos “liberamos” de cualquier
+                modelo y nos concentramos en la fisiología del entrenamiento, y en las características específicas del deportista, esto es, en tus características!. En base a eso diseñamos lo que consideramos más apropiado para cada atleta de acuerdo
+                al momento y los objetivos propuestos.</P>
+        </div>
+
+        <div class="cuerpo-galeria">
+            <p>
+                GALERIA
+            </p>
+            <ul class="imagenes-galeria">
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery1.jpg' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery2.jpg' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery3.jpg' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery4.jpg' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery5.jpg' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery6.jpg' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery7.jpg' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery8.jpg' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery9.jpg' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery10.jpg' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery11.jpg' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery12.jpg' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery13.webp' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery14.jpg' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery15.jpg' %}" class="galeria__img"></li>
+                <li class="galeria__item"><img src="{% static 'inicio/img/galery16.webp' %}" class="galeria__img"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="contenedor">
+
+
+
+        <div class="entrenamiento">
+            <h3>Entrenamiento Intensivo</h3>
+            <div class="icono-entrenamiento">
+                <a href="https://www.entrenamiento.com/"> <img src="{% static 'inicio/img/icon 1.png' %}" alt=""></a>
+            </div>
+            <p>
+                El <strong> entrenamiento intensivo</strong> para personas con un ritmo sostenido de ejercicio durante cierto tiempo.
+            </p>
+        </div>
+        <div class="personal-trainer">
+            <h3>Trainer Especializado</h3>
+            <div class="icono-trainer">
+                <img src="{% static 'inicio/img/trainer.jpg' %}" alt="">
+            </div>
+            <p>
+                Te ofrecemos el mejor Staff de personal trainer que estarán supervisando los entrenamiento con el fin de trabajar tu cuerpo de manera efectiva.
+            </p>
+        </div>
+        <div class="grupal">
+            <h3>Entrenamiento Grupal</h3>
+            <div class="icono-grupal">
+                <A href="http://trainer.com/"> <img src="{% static 'inicio/img/icon 3.png' %}" alt=""></a>
+            </div>
+            </A>
+            <p>
+                El <strong>entrenamiento grupal</strong> apoate en la motivacion grupal para mejorar, aprovecha la sinerguia del grupo.
+            </p>
+        </div>
+        <div class="funcional">
+            <h3>Entrenamiento funcional</h3>
+            <div class="icono-funcional">
+                <A href="http://trainer.com/"> <img src="{% static 'inicio/img/icon 4.jpg' %}" alt=""></a>
+            </div>
+            </A>
+            <p>
+                El <strong>  entrenamiento funcional</strong> muy efectivo que trae muchisimos beneficios, como alargar la vida de quines lo practican.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+<footer>
+    {% include 'inicio/footer.html' %}
+
+</footer>
+
+</html>
+{% endblock %}
